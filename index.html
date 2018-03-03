@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
   <title>Airsoft Tracker</title>
 
@@ -12,24 +12,22 @@
       <link rel="stylesheet" href="./main.css" type="text/css">
       <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
 
-      <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-      <script>
-        // Initialize Firebase
-        var config = {
-          apiKey: "AIzaSyCxca0SVU4IleyYsPeAUCuBd-KlSRbQpLw",
-          authDomain: "airsoft-demo.firebaseapp.com",
-          databaseURL: "https://airsoft-demo.firebaseio.com",
-          projectId: "airsoft-demo",
-          storageBucket: "",
-          messagingSenderId: "1009336051488"
-        };
-        firebase.initializeApp(config);
-      </script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC0Vq523kRMRNc3COAzlfAK08_4e-6QT1I",
+    authDomain: "airsoft-tracker-36cfc.firebaseapp.com",
+    databaseURL: "https://airsoft-tracker-36cfc.firebaseio.com",
+    projectId: "airsoft-tracker-36cfc",
+    storageBucket: "airsoft-tracker-36cfc.appspot.com",
+    messagingSenderId: "66907555460"
+  };
+  firebase.initializeApp(config);
+</script>
 <script src = "https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
 
   <script src="./controller.js"></script>
 
-  <script src="./index.js"></script>
 
 
 
@@ -40,7 +38,7 @@
 
 <body>
   <div class="container" style="padding:0px">
-            <nav class="navbar navbar-default" role="navigation">
+            <nav class="navbar navbar-inverse" role="navigation">
                 <div class="container" >
                    <div class="navbar-header">
                        <a class="navbar-brand" href="./index.html" style="font-size:2em; color:grey;">Airsoft Tracker</a>
@@ -69,7 +67,7 @@
       <div class="col-lg-6 col-lg-offset-3 text-center" style="padding:0px">
 
         <form >
-        <select style="height:45px; font-size:30px;"name="players" id="players">
+        <select style="height:45px; font-size:30px; background-color:black; color:white"name="players" id="players">
           <option value="Choose a Name">Choose your Callsign</option>
           <option value="HellJumper">HellJumper</option>
           <option value="Pariah">Pariah</option>
@@ -96,12 +94,15 @@
           <span id="counter">Kills </span><span id='killsCounter'></span><span id="counter"> / Deaths </span><span id="deathsCounter"></span>
         </div>
         <div class="row">
-        <div class="col-lg-12">
-          <form>
-            <input type='text' name="location" placeholder="Enter Game Location" style="width:50%;margin-bottom:10px;">
+        <div class="col-lg-12 text-center">
+          <form style="margin-bottom:5px; color:white">
             <input type='radio' name='record' value='Win'> Win <input type='radio' name='record' value='Loss'> Loss <input type='radio' name='record' value='Unknown'> Unknown
             </input>
           </form>
+          <form>
+            <input id='location' type='text' name="location" placeholder="Enter Game Location" style="width:40%;margin-bottom:10px;"></input>
+          </form>
+
         </div>
       </div>
 
